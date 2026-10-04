@@ -1,0 +1,15 @@
+# ScoutLens
+
+> ScoutLens is an independent explainable football scouting application by Dilip Badal. It ranks candidates for a club, position and role across Europe's five major leagues and supports interactive two-player comparisons.
+
+Uses historical 2024/25 and 2025/26 season aggregates, not live squads. Fit scores are weighted positional percentiles with optional possession similarity, not transfer-success probabilities. Formation is planning context and does not affect scoring. Missing required metrics exclude candidates. Photos and Football Manager game ratings do not influence ranking. Third-party data and photos retain their own rights; the combined dataset has no blanket reuse license.
+
+## Documentation
+
+- [About ScoutLens](/about.md): Project, creator and contact details.
+- [Data and methodology](/data.md): Sources, licensing, snapshot coverage, scoring, quality checks and limitations.
+
+## Optional
+
+- [Source repository](https://github.com/dilipBadal/ScoutLense): Application source and preparation scripts.
+- [Feedback](https://github.com/dilipBadal/ScoutLense/issues): Report a reproducible issue or suggest an improvement.

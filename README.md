@@ -60,7 +60,7 @@ npm run build
 
 ## Deploy both parts on Vercel
 
-1. Push this project to a private Git repository, including `backend/assets/scoutlens.json` and `package-lock.json`. Do not commit raw data or `.env` files.
+1. Push this project to your Git repository, including `backend/assets/scoutlens.json` and `package-lock.json`. Do not commit raw data or `.env` files.
 2. Import the repository into Vercel. Choose **Vite** as the framework and the repository root as the root directory. Build: `npm run build`; output: `dist`.
 3. Keep `vercel.json`: it routes `/api/*` to the Python ASGI entrypoint, includes the compact runtime snapshot, and excludes raw data and development files. Python 3.12 is specified in `.python-version`.
 4. Deploy. No environment variables are required for this snapshot-based version.
@@ -89,3 +89,11 @@ Use **Compare player** in a profile to choose a top matching candidate or search
 `/` is the home page and `/scout` is the workspace. The workspace URL stores the brief (`team_id`, `season`, `role`, `position`, filters and formation), result `page`, selected `player`, and `compare` player. `results=1` restores the search after reload; `compare=pick` opens the picker. Browser Back/Forward restores these states. Invalid filter parameters receive valid defaults; API validation still enforces all constraints. Vercel's existing SPA rewrite supports direct links; a hosted deployment has not been verified.
 
 Validation: `python -m pytest -q` and `node --test tests/scout-url.test.mjs tests/formation.test.mjs`, plus browser checks for choosing/searching, refresh, Back/Forward, page-two links and mobile overflow.
+
+## About, data and crawler documentation
+
+`/about` describes the project and creator; `/data` documents the sources, source-specific license statements, actual snapshot counts, scoring and limitations. Both support direct navigation and browser history. Contact links and source links live in `frontend/src/content/siteContent.json`.
+
+`/llms.txt` provides a concise guide to `/about.md` and `/data.md`. `/robots.txt` allows public pages and asks crawlers to avoid `/api/`; crawler instructions are not access controls. The prebuild step in `tooling/build-site-content.mjs` derives coverage from the committed runtime dataset and generates Markdown from the same content used in the UI. This tooling directory must remain included in Vercel builds.
+
+Set `SITE_URL` in the Vercel build environment to the final production origin (for example, your HTTPS custom domain). The build then generates `/sitemap.xml`, adds its URL to robots.txt and enables canonical links. When unset, these domain-specific outputs are omitted rather than pointing to an assumed domain.

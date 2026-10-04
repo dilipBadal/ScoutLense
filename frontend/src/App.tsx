@@ -8,8 +8,12 @@ import { SearchPanel } from "./components/SearchPanel";
 import { CandidateTable } from "./components/CandidateTable";
 import { HomePage } from "./components/HomePage";
 import { Methodology } from "./components/Methodology";
+import { AboutPage } from "./components/AboutPage";
+import { DataPage } from "./components/DataPage";
+import { usePageMetadata } from "./lib/usePageMetadata";
 export default function App() {
   const [path, setPath] = useState(window.location.pathname);
+  usePageMetadata(path);
   const navigate = (next: string) => {
     if (window.location.pathname !== next)
       window.history.pushState({}, "", next);
@@ -67,12 +71,29 @@ export default function App() {
           >
             Scouting <ArrowUpRight size={14} />
           </a>
+          {[
+            ["/about", "About"],
+            ["/data", "Data"],
+          ].map(([href, name]) => (
+            <a
+              key={href}
+              href={href}
+              aria-current={path === href ? "page" : undefined}
+              onClick={(e) => link(e, href)}
+            >
+              {name}
+            </a>
+          ))}
         </nav>
       </header>
       <main>
-        {path !== "/scout" ? (
+        {path === "/about" ? (
+          <AboutPage />
+        ) : path === "/data" ? (
+          <DataPage />
+        ) : path === "/" ? (
           <HomePage catalog={catalog} onStart={() => navigate("/scout")} />
-        ) : (
+        ) : path === "/scout" ? (
           <>
             <section className="scouting-intro">
               <span className="eyebrow">SCOUTING WORKSPACE</span>
@@ -205,10 +226,31 @@ export default function App() {
               </>
             )}
           </>
+        ) : (
+          <section className="info-hero">
+            <h1>Page not found.</h1>
+            <a className="text-link" href="/" onClick={(e) => link(e, "/")}>
+              Return home
+            </a>
+          </section>
         )}
         <footer>
           <span>ScoutLens · A clearer view of the next signing.</span>
-          <span>Historical data · Explainable scoring</span>
+          <nav className="footer-links" aria-label="Footer navigation">
+            <a href="/about" onClick={(e) => link(e, "/about")}>
+              About
+            </a>
+            <a href="/data" onClick={(e) => link(e, "/data")}>
+              Data & methodology
+            </a>
+            <a
+              href="https://github.com/dilipBadal/ScoutLense"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Source code
+            </a>
+          </nav>
         </footer>
       </main>
     </>

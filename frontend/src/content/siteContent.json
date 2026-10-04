@@ -1,0 +1,103 @@
+{
+  "creator": "Dilip Badal",
+  "intro": "I’m building ScoutLens to turn football data into a clearer recruitment conversation: who fits the role, how they compare, and what the numbers can actually tell us.",
+  "contacts": [
+    { "name": "GitHub", "href": "https://github.com/dilipBadal" },
+    { "name": "Portfolio", "href": "https://dilipbadal.github.io/portfolio/" },
+    {
+      "name": "LinkedIn",
+      "href": "https://www.linkedin.com/in/dilip-badal-aab9a5243/"
+    },
+    { "name": "Email", "href": "mailto:workwithdilip1@gmail.com" }
+  ],
+  "repository": "https://github.com/dilipBadal/ScoutLense",
+  "sources": [
+    {
+      "name": "Top-five football dataset",
+      "by": "m-mahadi · FBref, SofaScore and Understat",
+      "use": "FBref-derived player-season identities, ages, minutes and team possession; SofaScore passing, defending, shooting, duels and goalkeeper statistics; Understat non-penalty expected goals and expected assists.",
+      "license": "MIT applies to the repository’s code only. The football data is explicitly excluded from MIT; each original provider retains its rights. The source describes research and educational use and does not grant redistribution or commercial rights.",
+      "links": [
+        {
+          "name": "Dataset repository",
+          "href": "https://github.com/m-mahadi/top5-football-dataset"
+        },
+        {
+          "name": "License & data notice",
+          "href": "https://github.com/m-mahadi/top5-football-dataset/blob/master/LICENSE"
+        },
+        { "name": "FBref", "href": "https://fbref.com/" },
+        { "name": "SofaScore", "href": "https://www.sofascore.com/" },
+        { "name": "Understat", "href": "https://understat.com/" }
+      ]
+    },
+    {
+      "name": "Transfermarkt datasets",
+      "by": "David Caribou · dcaribou/transfermarkt-datasets",
+      "use": "Player identities, preferred foot, profile positions, contracts, dated market values and club IDs. Match formations and starting-lineup records provide historical formation context and position eligibility.",
+      "license": "The dataset project publishes a CC0 1.0 license. This describes the publisher’s dedication; it does not change third-party rights in the underlying Transfermarkt material.",
+      "links": [
+        {
+          "name": "Dataset repository",
+          "href": "https://github.com/dcaribou/transfermarkt-datasets"
+        },
+        {
+          "name": "Kaggle download",
+          "href": "https://www.kaggle.com/datasets/davidcariboo/player-scores"
+        },
+        {
+          "name": "CC0 license",
+          "href": "https://github.com/dcaribou/transfermarkt-datasets/blob/master/LICENSE"
+        },
+        { "name": "Transfermarkt", "href": "https://www.transfermarkt.com/" }
+      ]
+    },
+    {
+      "name": "Player portraits & identity matching",
+      "by": "Local Football Manager face pack · public FM identity files",
+      "use": "A subset of the locally supplied Football Manager 2024 face pack is displayed as WebP portraits. Public FM 2023 and FM26 example files help map FM IDs to real player identities. Game attributes are never used in ScoutLens scores.",
+      "license": "Portrait and identity-file reuse rights have not been verified. Downloading a face pack does not establish redistribution rights. ScoutLens claims no ownership of the photos and does not assign them the application’s code license. Players without a matched portrait use initials.",
+      "links": [
+        {
+          "name": "FM 2023 identity file",
+          "href": "https://github.com/dannytharris/FM/blob/main/FM%202023.csv"
+        },
+        {
+          "name": "FM26 identity file",
+          "href": "https://github.com/fredGob/FMdataExport/blob/main/DataAnalyser/FM26_Example_data.csv"
+        },
+        {
+          "name": "Import audit",
+          "href": "https://github.com/dilipBadal/ScoutLense/tree/main/docs/face-import"
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "title": "Match identities carefully",
+      "text": "Names and birth years link players to metadata. Normalized names, explicit club aliases, competition, season and club spells link statistics. Ambiguous matches are excluded."
+    },
+    {
+      "title": "Keep missing data visible",
+      "text": "Missing values remain unavailable. Source-minute discrepancies greater than the larger of 180 minutes or 12% are quarantined. Per-90 rates use each source’s own recorded minutes."
+    },
+    {
+      "title": "Compare like positions",
+      "text": "Role metrics are weighted percentiles against players at the same position across all five leagues with at least 900 minutes. Every required metric must be available. Lower-minute candidates keep the same benchmark."
+    },
+    {
+      "title": "Explain the final score",
+      "text": "Fit is 90% role score and 10% team-possession similarity. Similarity is max(0, 100 − 3 × absolute possession difference). Goalkeepers and players without possession context use the role score alone. Formation does not change the score."
+    }
+  ],
+  "limits": [
+    "Fit scores are product heuristics, not probabilities of transfer success. Role labels describe recruitment briefs; they do not prove a player’s tactical behavior.",
+    "This is a historical snapshot for 2024/25 and 2025/26, not a live squad feed. The preparation date is not the collection date of every source.",
+    "Market values use the latest available dated record, including when viewing an older season. They are estimates, not asking prices or historical-as-of-season valuations. Contract details are snapshot values.",
+    "Starting positions require at least three starts and 15% of recorded starts; otherwise the profile position is used with lower confidence. Pitch slots are schematic, not tracked locations.",
+    "Pressures, off-ball runs, passing under pressure, progressive carries and tracking data are unavailable across the scouting pool. There is no league-strength adjustment. Possession similarity does not establish tactical compatibility.",
+    "Goalkeeper save percentage uses saves divided by saves plus goals conceded. It is a proxy without shot-quality adjustment. Club comparisons describe incumbent performance, not an ideal replacement target."
+  ],
+  "unused": "The separately downloaded Kaggle player-stat CSV, SoFIFA/EA ratings and wages are not used in scoring. StatsBomb and Wyscout event data are not integrated. Portraits do not influence rankings."
+}

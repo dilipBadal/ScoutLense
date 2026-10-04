@@ -1,0 +1,238 @@
+.info-page {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.info-hero {
+  padding: 64px 0 48px;
+  max-width: 790px;
+}
+.info-hero h1 {
+  font-size: clamp(36px, 4.4vw, 58px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  margin: 20px 0 24px;
+}
+.info-hero h1 span {
+  color: #64805a;
+}
+.info-hero > p {
+  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #637267;
+}
+.info-section {
+  display: grid;
+  grid-template-columns: 0.9fr 2fr;
+  gap: 65px;
+  padding: 42px 0;
+  border-top: 1px solid #dce1d7;
+}
+.info-section h2 {
+  font-size: 27px;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+  margin: 14px 0;
+}
+.info-section h3 {
+  font-size: 17px;
+  line-height: 1.4;
+}
+.info-body,
+.source-entry,
+.method-steps,
+.data-limits {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #637267;
+}
+.info-body > p + p {
+  margin-top: 18px;
+}
+.info-body > .text-link {
+  margin-top: 20px;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #244b3b;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  min-height: 38px;
+  overflow-wrap: anywhere;
+}
+.contact-links,
+.source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+  margin-top: 15px;
+}
+.contact-email {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 28px 0;
+}
+.about-features svg {
+  color: #77944a;
+}
+.about-features h3 {
+  font-size: 14px;
+  color: #244b3b;
+  margin: 10px 0 8px;
+}
+.about-features p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.info-caption {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #748171;
+  margin-top: 16px;
+}
+.data-snapshot {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border-block: 1px solid #dce1d7;
+  padding: 26px 0;
+}
+.data-snapshot > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.data-snapshot strong {
+  font-size: 32px;
+  font-weight: 550;
+  letter-spacing: -1px;
+}
+.data-snapshot span,
+.snapshot-caption {
+  font-size: 12px;
+  color: #6a786c;
+  line-height: 1.8;
+}
+.snapshot-caption {
+  padding: 16px 0 30px;
+}
+.source-entry + .source-entry {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #e1e6dc;
+}
+.source-entry h3,
+.method-steps h3 {
+  color: #244b3b;
+}
+.source-by {
+  display: block;
+  font-size: 12px;
+  margin: 3px 0 14px;
+}
+.license-note {
+  background: #eef2e7;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-top: 18px;
+  font-size: 12px;
+}
+.license-note strong {
+  color: #244b3b;
+}
+.license-note p {
+  margin-top: 5px;
+}
+.method-steps {
+  margin: 0;
+  padding-left: 23px;
+}
+.method-steps li {
+  padding-left: 10px;
+}
+.method-steps li + li {
+  margin-top: 24px;
+}
+.method-steps h3 {
+  margin-bottom: 6px;
+}
+.data-limits {
+  margin: 0;
+  padding-left: 20px;
+}
+.data-limits li + li {
+  margin-top: 17px;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.footer-links a {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+}
+@media (hover: hover) and (pointer: fine) {
+  .text-link:hover,
+  .footer-links a:hover {
+    color: #64805a;
+  }
+}
+@media (max-width: 800px) {
+  .topbar .nav-label {
+    display: none;
+  }
+  .info-section {
+    gap: 28px;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media (max-width: 600px) {
+  .topbar {
+    height: auto;
+    min-height: 76px;
+    flex-wrap: wrap;
+    gap: 5px 20px;
+    padding-block: 12px;
+  }
+  .site-nav {
+    gap: 17px;
+    flex-wrap: wrap;
+  }
+  .site-nav a {
+    min-height: 36px;
+  }
+  .info-hero {
+    padding: 40px 0 32px;
+  }
+  .info-hero h1 {
+    letter-spacing: -1.3px;
+  }
+  .info-hero > p {
+    font-size: 14px;
+  }
+  .info-section {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 30px 0;
+  }
+  .about-features {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .data-snapshot {
+    grid-template-columns: 1fr 1fr;
+  }
+}

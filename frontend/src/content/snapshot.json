@@ -1,0 +1,14 @@
+{
+  "prepared_at": "2026-10-04",
+  "players": 3290,
+  "spells": 5246,
+  "clubs": 110,
+  "faces": 2952,
+  "report": {
+    "sofascore_matched": 4220,
+    "understat_matched": 4480,
+    "unresolved_metadata": 447,
+    "understat_minutes_quarantined": 99,
+    "sofascore_minutes_quarantined": 78
+  }
+}
