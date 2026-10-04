@@ -11,6 +11,7 @@ import { Methodology } from "./components/Methodology";
 import { AboutPage } from "./components/AboutPage";
 import { DataPage } from "./components/DataPage";
 import { usePageMetadata } from "./lib/usePageMetadata";
+import { SiteAnalytics } from "./components/SiteAnalytics";
 export default function App() {
   const [path, setPath] = useState(window.location.pathname);
   usePageMetadata(path);
@@ -46,6 +47,7 @@ export default function App() {
   } = useScoutingState();
   return (
     <>
+      <SiteAnalytics path={path} />
       <header className="topbar">
         <a
           className="brand"

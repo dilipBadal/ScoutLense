@@ -76,6 +76,10 @@ The separately downloaded Kaggle player-stat CSV, SoFIFA/EA ratings and wages ar
 - Pressures, off-ball runs, passing under pressure, progressive carries and tracking data are unavailable across the scouting pool. There is no league-strength adjustment. Possession similarity does not establish tactical compatibility.
 - Goalkeeper save percentage uses saves divided by saves plus goals conceded. It is a proxy without shot-quality adjustment. Club comparisons describe incumbent performance, not an ideal replacement target.
 
+## Site analytics
+
+ScoutLens uses Vercel Web Analytics for aggregate visitor and page-view statistics without analytics cookies. Scouting filters, player IDs and URL fragments are removed from page-view URLs. Searches and comparison clicks are not custom events. Analytics is disabled in local development. [Vercel analytics privacy](https://vercel.com/docs/analytics/privacy-policy).
+
 ## Corrections
 
 [Contact Dilip](mailto:workwithdilip1@gmail.com) for data corrections or attribution questions. ScoutLens grants no blanket license to the combined data or photographs.

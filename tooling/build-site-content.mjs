@@ -59,6 +59,10 @@ ${content.unused}
 
 ${content.limits.map((l) => `- ${l}`).join("\n")}
 
+## Site analytics
+
+ScoutLens uses Vercel Web Analytics for aggregate visitor and page-view statistics without analytics cookies. Scouting filters, player IDs and URL fragments are removed from page-view URLs. Searches and comparison clicks are not custom events. Analytics is disabled in local development. [Vercel analytics privacy](https://vercel.com/docs/analytics/privacy-policy).
+
 ## Corrections
 
 [Contact Dilip](mailto:workwithdilip1@gmail.com) for data corrections or attribution questions. ScoutLens grants no blanket license to the combined data or photographs.

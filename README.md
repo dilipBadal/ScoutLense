@@ -97,3 +97,9 @@ Validation: `python -m pytest -q` and `node --test tests/scout-url.test.mjs test
 `/llms.txt` provides a concise guide to `/about.md` and `/data.md`. `/robots.txt` allows public pages and asks crawlers to avoid `/api/`; crawler instructions are not access controls. The prebuild step in `tooling/build-site-content.mjs` derives coverage from the committed runtime dataset and generates Markdown from the same content used in the UI. This tooling directory must remain included in Vercel builds.
 
 Set `SITE_URL` in the Vercel build environment to the final production origin (for example, your HTTPS custom domain). The build then generates `/sitemap.xml`, adds its URL to robots.txt and enables canonical links. When unset, these domain-specific outputs are omitted rather than pointing to an assumed domain.
+
+## Web Analytics
+
+Vercel Web Analytics is integrated via `@vercel/analytics/react`. In the Vercel dashboard, open this project's **Analytics** tab and click **Enable**, then deploy. The SDK runs in production builds only; local Vite development loads no collector. Vercel's `/_vercel/` routes are reserved from the SPA fallback and the existing same-origin CSP allows the production collector.
+
+Page views are tracked by pathname, including client-side navigation and Back/Forward. Changes to scouting filter parameters do not produce additional page views. `beforeSend` removes query strings and fragments and permits only the four public pages. No custom events are sent. The Data page discloses this use. Local tests cannot confirm collection in the hosted Analytics dashboard.

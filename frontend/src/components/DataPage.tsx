@@ -150,6 +150,24 @@ export function DataPage() {
           </div>
         </div>
       </section>
+      <section className="info-section">
+        <div>
+          <span className="eyebrow">SITE ANALYTICS</span>
+          <h2>Understanding visits.</h2>
+        </div>
+        <div className="info-body">
+          <p>
+            ScoutLens uses Vercel Web Analytics for aggregate visitor and
+            page-view statistics. It does not use analytics cookies. Scouting
+            filters, player IDs and URL fragments are removed from page-view
+            URLs; searches and comparison clicks are not sent as custom events.
+            Analytics is disabled in local development.
+          </p>
+          <ExternalLink href="https://vercel.com/docs/analytics/privacy-policy">
+            How Vercel handles analytics data
+          </ExternalLink>
+        </div>
+      </section>
     </div>
   );
 }
