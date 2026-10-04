@@ -1,0 +1,173 @@
+{
+  "prepared_at": "2026-10-04",
+  "team": "Arsenal",
+  "season": "2025/26",
+  "role": "Goalscorer",
+  "players": [
+    {
+      "id": "132098",
+      "name": "Harry Kane",
+      "team": "Bayern Munich",
+      "score": 94.4,
+      "role_score": 97.4,
+      "minutes": 2377,
+      "metrics": [
+        {
+          "key": "npxg",
+          "label": "Non-penalty xG",
+          "unit": "/90",
+          "value": 0.802,
+          "percentile": 100,
+          "weight": 0.4,
+          "benchmark_count": 184
+        },
+        {
+          "key": "shots",
+          "label": "Shots",
+          "unit": "/90",
+          "value": 4.496,
+          "percentile": 97.7,
+          "weight": 0.25,
+          "benchmark_count": 177
+        },
+        {
+          "key": "xa",
+          "label": "Expected assists",
+          "unit": "/90",
+          "value": 0.279,
+          "percentile": 96.2,
+          "weight": 0.15,
+          "benchmark_count": 184
+        },
+        {
+          "key": "aerial_win",
+          "label": "Aerial duels won",
+          "unit": "%",
+          "value": 61.429,
+          "percentile": 98.3,
+          "weight": 0.1,
+          "benchmark_count": 177
+        },
+        {
+          "key": "key_passes",
+          "label": "Key passes",
+          "unit": "/90",
+          "value": 1.511,
+          "percentile": 87.5,
+          "weight": 0.1,
+          "benchmark_count": 177
+        }
+      ]
+    },
+    {
+      "id": "339314",
+      "name": "Deniz Undav",
+      "team": "Stuttgart",
+      "score": 90.8,
+      "role_score": 90.2,
+      "minutes": 2241,
+      "metrics": [
+        {
+          "key": "npxg",
+          "label": "Non-penalty xG",
+          "unit": "/90",
+          "value": 0.728,
+          "percentile": 96.7,
+          "weight": 0.4,
+          "benchmark_count": 184
+        },
+        {
+          "key": "shots",
+          "label": "Shots",
+          "unit": "/90",
+          "value": 4.887,
+          "percentile": 98.9,
+          "weight": 0.25,
+          "benchmark_count": 177
+        },
+        {
+          "key": "xa",
+          "label": "Expected assists",
+          "unit": "/90",
+          "value": 0.222,
+          "percentile": 90.7,
+          "weight": 0.15,
+          "benchmark_count": 184
+        },
+        {
+          "key": "aerial_win",
+          "label": "Aerial duels won",
+          "unit": "%",
+          "value": 37.5,
+          "percentile": 41.2,
+          "weight": 0.1,
+          "benchmark_count": 177
+        },
+        {
+          "key": "key_passes",
+          "label": "Key passes",
+          "unit": "/90",
+          "value": 1.642,
+          "percentile": 90.9,
+          "weight": 0.1,
+          "benchmark_count": 177
+        }
+      ]
+    },
+    {
+      "id": "406625",
+      "name": "Lautaro Mart\u00ednez",
+      "team": "Inter",
+      "score": 90.8,
+      "role_score": 90.9,
+      "minutes": 2159,
+      "metrics": [
+        {
+          "key": "npxg",
+          "label": "Non-penalty xG",
+          "unit": "/90",
+          "value": 0.7,
+          "percentile": 95.6,
+          "weight": 0.4,
+          "benchmark_count": 184
+        },
+        {
+          "key": "shots",
+          "label": "Shots",
+          "unit": "/90",
+          "value": 3.802,
+          "percentile": 93.2,
+          "weight": 0.25,
+          "benchmark_count": 177
+        },
+        {
+          "key": "xa",
+          "label": "Expected assists",
+          "unit": "/90",
+          "value": 0.257,
+          "percentile": 95.1,
+          "weight": 0.15,
+          "benchmark_count": 184
+        },
+        {
+          "key": "aerial_win",
+          "label": "Aerial duels won",
+          "unit": "%",
+          "value": 42.857,
+          "percentile": 62.5,
+          "weight": 0.1,
+          "benchmark_count": 177
+        },
+        {
+          "key": "key_passes",
+          "label": "Key passes",
+          "unit": "/90",
+          "value": 1.529,
+          "percentile": 88.1,
+          "weight": 0.1,
+          "benchmark_count": 177
+        }
+      ]
+    }
+  ]
+}

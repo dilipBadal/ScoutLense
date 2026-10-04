@@ -1,4 +1,4 @@
-import { HeroPitch } from "./HeroPitch";
+import { HeroWalkthrough } from "./HeroWalkthrough";
 import { Crosshair, ChartNoAxesCombined, ListFilter } from "lucide-react";
 import type { Catalog } from "../types";
 
@@ -51,7 +51,7 @@ export function HomePage({
             Five leagues. Two seasons. Every score explained.
           </span>
         </div>
-        <HeroPitch />
+        <HeroWalkthrough />
       </section>
       <div className="home-numbers">
         <div>

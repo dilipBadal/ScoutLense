@@ -1,0 +1,95 @@
+.hero-selected-player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 25px 0 18px;
+}
+.hero-selected-player > div {
+  flex: 1;
+}
+.hero-selected-player strong {
+  display: block;
+  font-size: 15px;
+}
+.hero-selected-player span {
+  display: block;
+  font-size: 10px;
+  color: #71816e;
+  margin-top: 5px;
+}
+.hero-selected-player b {
+  font-size: 24px;
+  font-weight: 600;
+}
+.hero-selected-player small {
+  font-size: 10px;
+  color: #71816e;
+}
+.demo-chart-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #4b654e;
+}
+.hero-radar svg {
+  display: block;
+  height: 175px;
+  width: 100%;
+}
+.demo-grid {
+  fill: none;
+  stroke: #dce3d4;
+  stroke-width: 1;
+}
+.demo-benchmark {
+  fill: none;
+  stroke: #a5b38c;
+  stroke-width: 1;
+  stroke-dasharray: 4 3;
+}
+.demo-profile {
+  fill: #244b3b22;
+  stroke: #244b3b;
+  stroke-width: 1.8;
+}
+.hero-evidence svg text {
+  fill: #71816e;
+  font-size: 9px;
+}
+.hero-radar circle {
+  fill: #244b3b;
+}
+.demo-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 9px;
+  color: #71816e;
+}
+.demo-legend span:first-child {
+  color: #244b3b;
+}
+.hero-scatter {
+  border-top: 1px solid #e2e7dd;
+  padding-top: 16px;
+  margin-top: 17px;
+}
+.hero-scatter svg {
+  width: 100%;
+  height: 100px;
+  display: block;
+}
+.demo-dot-0 {
+  fill: #244b3b;
+}
+.demo-dot-1 {
+  fill: #b49659;
+}
+.demo-dot-2 {
+  fill: #788aa7;
+}
+.demo-axis-label {
+  display: block;
+  text-align: center;
+  font-size: 9px;
+  color: #71816e;
+}
