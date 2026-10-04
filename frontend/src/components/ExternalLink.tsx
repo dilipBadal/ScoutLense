@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
 
 export function ExternalLink({
@@ -17,7 +16,6 @@ export function ExternalLink({
       rel={external ? "noopener noreferrer" : undefined}
     >
       {children}
-      <ArrowUpRight size={14} aria-hidden="true" />
     </a>
   );
 }

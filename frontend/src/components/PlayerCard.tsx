@@ -1,6 +1,6 @@
 import { PlayerCharts } from "./PlayerCharts";
 import { PlayerAvatar } from "./PlayerAvatar";
-import { ArrowUpRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import type { Player, TeamAnalysis } from "../types";
 const money = (value: number | null) =>
   value === null
@@ -129,7 +129,7 @@ export function PlayerCard({
             target="_blank"
             rel="noreferrer"
           >
-            Transfermarkt profile <ArrowUpRight size={13} />
+            Transfermarkt profile
           </a>
         </div>
       </section>

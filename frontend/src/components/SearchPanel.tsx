@@ -1,5 +1,5 @@
 import { PositionPicker } from "./PositionPicker";
-import { ArrowUpRight, SlidersHorizontal } from "lucide-react";
+import { SlidersHorizontal } from "lucide-react";
 import type { Catalog, Query } from "../types";
 import { Select } from "./Select";
 export function SearchPanel({
@@ -156,7 +156,6 @@ export function SearchPanel({
         </details>
         <button className="primary" disabled={busy} type="submit">
           {busy ? "Finding candidates…" : "Find best fits"}
-          <ArrowUpRight size={18} />
         </button>
         <p className="form-note">
           Five leagues. Real records. Explained rankings.

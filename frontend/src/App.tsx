@@ -2,7 +2,7 @@ import { useScoutingState } from "./lib/useScoutingState";
 import { TeamCharts } from "./components/TeamCharts";
 import { ShortlistChart } from "./components/ShortlistChart";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, ShieldCheck, Search, Users } from "lucide-react";
+import { ShieldCheck, Search, Users } from "lucide-react";
 import { Brand } from "./components/Brand";
 import { SearchPanel } from "./components/SearchPanel";
 import { CandidateTable } from "./components/CandidateTable";
@@ -69,7 +69,7 @@ export default function App() {
             aria-current={path === "/scout" ? "page" : undefined}
             onClick={(e) => link(e, "/scout")}
           >
-            Scouting <ArrowUpRight size={14} />
+            Scouting
           </a>
           {[
             ["/about", "About"],

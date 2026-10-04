@@ -1,10 +1,5 @@
 import { HeroPitch } from "./HeroPitch";
-import {
-  ArrowUpRight,
-  Crosshair,
-  ChartNoAxesCombined,
-  ListFilter,
-} from "lucide-react";
+import { Crosshair, ChartNoAxesCombined, ListFilter } from "lucide-react";
 import type { Catalog } from "../types";
 
 export function HomePage({
@@ -50,7 +45,7 @@ export function HomePage({
               }
             }}
           >
-            Open the scouting workspace <ArrowUpRight size={18} />
+            Open the scouting workspace
           </a>
           <span className="home-caption">
             Five leagues. Two seasons. Every score explained.
