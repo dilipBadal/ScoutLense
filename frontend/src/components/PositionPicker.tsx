@@ -5,6 +5,7 @@ import {
   pitchFormation,
   PLANNING_FORMATIONS,
 } from "../lib/formations";
+import { Dialog } from "./Dialog";
 import { FormationPitch } from "./FormationPitch";
 import { Select } from "./Select";
 export function PositionPicker({
@@ -18,6 +19,7 @@ export function PositionPicker({
   club?: Team;
   onChange: (patch: Partial<Query>) => void;
 }) {
+  const [pitchOpen, setPitchOpen] = useState(false);
   const recorded = club?.formations[0];
   const displayedFormation = query.formation ?? recorded?.name ?? null;
   const formation = pitchFormation(displayedFormation);
@@ -61,50 +63,87 @@ export function PositionPicker({
       className="position-picker"
       aria-label="Choose a formation position and role"
     >
-      <Select
-        label="Formation on pitch"
-        value={query.formation ?? ""}
-        onChange={(value) => onChange({ formation: value || null })}
+      <button
+        type="button"
+        className="pitch-picker-trigger"
+        onClick={() => setPitchOpen(true)}
       >
-        <option value="">
-          {recorded
-            ? `Club default · ${recorded.name}`
-            : "No club formation recorded"}
-        </option>
-        {[...alternatives].map(([shape, label]) => (
-          <option key={shape} value={shape}>
-            {label}
-          </option>
-        ))}
-      </Select>
-      {formation ? (
-        <FormationPitch
-          formation={formation}
-          activeId={activeId}
-          onSelect={(slot) => choosePosition(slot.position, slot.id)}
-        />
-      ) : (
-        <p className="pitch-unavailable">
-          {displayedFormation
-            ? "This recorded formation has no pitch template yet."
-            : "No formation history is available."}{" "}
-          Choose a planning formation above, or select any position below.
-        </p>
-      )}
-      <p className="pitch-selection" aria-live="polite">
-        {activeSlot
-          ? `Selected slot: ${activeSlot.label}`
-          : `Custom position: ${catalog.positions.find((p) => p.id === query.position)?.name}`}
-      </p>
-      <p className="pitch-caption">
-        {query.formation
-          ? "Planning formation selected."
-          : recorded
-            ? `${recorded.matches} recorded league matches used this formation in ${catalog.seasons.find((s) => s.id === query.season)?.name}.`
-            : ""}{" "}
-        Slots are schematic; wide midfield slots can represent wing-backs. Edit
-        the position or role freely.
-      </p>
+        <span>
+          <strong>{displayedFormation ?? "Choose formation"}</strong>
+          <small>
+            {activeSlot?.label ?? query.position} · {role.name}
+          </small>
+        </span>
+        <span className="pitch-trigger-action">Choose on pitch</span>
+      </button>
+      <Dialog
+        open={pitchOpen}
+        onClose={() => setPitchOpen(false)}
+        title="Choose a position"
+        className="pitch-dialog"
+      >
+        <div className="pitch-dialog-body">
+          <div className="pitch-dialog-field">
+            {formation ? (
+              <FormationPitch
+                formation={formation}
+                activeId={activeId}
+                onSelect={(slot) => {
+                  choosePosition(slot.position, slot.id);
+                  setPitchOpen(false);
+                }}
+              />
+            ) : (
+              <p className="pitch-unavailable">
+                {displayedFormation
+                  ? "This recorded formation has no pitch template yet."
+                  : "No formation history is available."}{" "}
+                Choose a planning formation, or close this panel and use the
+                position dropdown.
+              </p>
+            )}
+          </div>
+          <div className="pitch-dialog-options">
+            <span className="eyebrow">
+              {club?.name ?? "Planning formation"}
+            </span>
+            <Select
+              label="Formation on pitch"
+              value={query.formation ?? ""}
+              onChange={(value) => onChange({ formation: value || null })}
+            >
+              <option value="">
+                {recorded
+                  ? `Club default · ${recorded.name}`
+                  : "No club formation recorded"}
+              </option>
+              {[...alternatives].map(([shape, label]) => (
+                <option key={shape} value={shape}>
+                  {label}
+                </option>
+              ))}
+            </Select>
+            <p className="pitch-selection" aria-live="polite">
+              {activeSlot
+                ? `Selected slot: ${activeSlot.label}`
+                : `Custom position: ${catalog.positions.find((p) => p.id === query.position)?.name}`}
+            </p>
+            <p className="pitch-caption">
+              {query.formation
+                ? "Planning formation selected."
+                : recorded
+                  ? `${recorded.matches} recorded league matches used this formation in ${catalog.seasons.find((s) => s.id === query.season)?.name}.`
+                  : ""}{" "}
+              Slots are schematic; wide midfield slots can represent wing-backs.
+              Edit the position or role freely.
+            </p>
+            <p className="field-help">
+              Select a circle to choose your position. Then choose its role in
+              the recruitment brief.
+            </p>
+          </div>
+        </div>
+      </Dialog>
       <Select
         label="Position"
         value={query.position}

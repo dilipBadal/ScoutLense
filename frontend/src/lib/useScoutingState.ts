@@ -77,9 +77,7 @@ export function useScoutingState() {
     abort.current?.abort();
     setBusy(false);
     setQuery({ ...next, page: 1 });
-    setResults(null);
     setError("");
-    briefToUrl(next, false);
   };
   return {
     catalog,

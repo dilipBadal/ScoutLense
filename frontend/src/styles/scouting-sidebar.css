@@ -1,0 +1,259 @@
+.scouting-filters {
+  position: sticky;
+  top: 20px;
+  min-width: 0;
+}
+.desktop-filter-panel .search-panel {
+  max-height: calc(100dvh - 250px);
+  display: flex;
+  flex-direction: column;
+}
+.search-panel .panel-heading {
+  padding: 17px 18px;
+  flex-shrink: 0;
+}
+.icon-button {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dce3d6;
+  border-radius: 7px;
+  background: white;
+  color: #526b59;
+  flex-shrink: 0;
+}
+.panel-heading .icon-button {
+  margin-left: auto;
+}
+.desktop-filter-panel .search-panel form,
+.filter-drawer .search-panel form {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+.brief-fields {
+  padding: 18px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+.brief-fields .field {
+  margin-bottom: 14px;
+  gap: 6px;
+}
+.brief-fields .club-context {
+  margin-bottom: 18px;
+  padding: 11px;
+}
+.brief-actions {
+  padding: 14px 18px;
+  border-top: 1px solid #e8ece3;
+  background: #fff;
+  flex-shrink: 0;
+}
+.brief-actions .primary {
+  justify-content: center;
+}
+.brief-actions .form-note {
+  margin-top: 10px;
+}
+.brief-pending {
+  font-size: 10px;
+  color: #7b6134;
+  line-height: 1.5;
+  margin-bottom: 9px;
+}
+.brief-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a88743;
+  flex-shrink: 0;
+}
+.pitch-picker-trigger {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  border: 1px solid #ccd9c2;
+  background: #f4f7ed;
+  border-radius: 8px;
+  padding: 13px;
+  color: #345037;
+  margin-bottom: 18px;
+}
+.pitch-picker-trigger strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.pitch-picker-trigger small {
+  font-size: 11px;
+  line-height: 1.5;
+}
+.pitch-trigger-action {
+  font-size: 11px;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.expand-filters {
+  width: 52px;
+  padding: 16px 8px;
+  border: 1px solid #dde3d8;
+  background: white;
+  color: #345037;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.expand-filters > span:not(.brief-dot) {
+  writing-mode: vertical-rl;
+  font-size: 12px;
+  font-weight: 650;
+}
+body:has(.scouting-intro) .workspace {
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 24px;
+}
+body:has(.scouting-intro) .workspace:has(.filters-collapsed) {
+  grid-template-columns: 52px minmax(0, 1fr);
+}
+.mobile-filter-trigger {
+  display: none;
+}
+.scout-dialog {
+  border: 1px solid #dde3d8;
+  border-radius: 14px;
+  padding: 0;
+  width: min(760px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  color: #18352d;
+  background: #fff;
+  box-shadow: 0 24px 80px #13281b33;
+}
+.scout-dialog::backdrop {
+  background: #152c2266;
+}
+.dialog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e8ece3;
+}
+.dialog-heading h2 {
+  font-size: 19px;
+  letter-spacing: -0.4px;
+}
+.pitch-dialog-body {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 26px;
+  padding: 24px;
+}
+.pitch-dialog-options .eyebrow {
+  margin-bottom: 22px;
+}
+.pitch-dialog-field .formation-picker {
+  max-width: 330px;
+  margin: auto;
+}
+.pitch-dialog-field .pitch-slot > span {
+  width: 40px;
+  height: 40px;
+  font-size: 10px;
+}
+.pitch-dialog-options .pitch-caption {
+  font-size: 12px;
+}
+.pitch-dialog-options .field-help {
+  font-size: 12px;
+  margin-top: 16px;
+}
+.filter-drawer {
+  display: none;
+}
+.filter-drawer[open] {
+  display: flex;
+  flex-direction: column;
+  width: min(380px, 100%);
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0 0 0 auto;
+  border-radius: 14px 0 0 14px;
+}
+.filter-drawer .dialog-heading {
+  padding: 16px 18px;
+}
+.filter-drawer .search-panel {
+  border: 0;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+.filter-drawer .panel-heading {
+  display: none;
+}
+.filter-drawer .search-panel form {
+  flex: 1;
+}
+@media (max-width: 900px) {
+  body:has(.scouting-intro) .workspace,
+  body:has(.scouting-intro) .workspace:has(.filters-collapsed) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .scouting-filters {
+    position: static;
+  }
+  .desktop-filter-panel {
+    display: none;
+  }
+  .mobile-filter-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border: 1px solid #dce3d6;
+    border-radius: 8px;
+    padding: 13px 16px;
+    color: #345037;
+    font-size: 12px;
+    font-weight: 650;
+  }
+}
+@media (max-width: 560px) {
+  .pitch-dialog-body {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px;
+  }
+  .pitch-dialog-field {
+    order: 2;
+  }
+  .pitch-dialog-options .eyebrow {
+    margin-bottom: 12px;
+  }
+  .pitch-dialog-options .pitch-caption,
+  .pitch-dialog-options .field-help {
+    display: none;
+  }
+  .pitch-dialog-options .pitch-selection {
+    margin: 0;
+  }
+  .dialog-heading {
+    padding: 16px 18px;
+  }
+  .pitch-dialog-field .formation-picker {
+    max-width: 270px;
+  }
+}

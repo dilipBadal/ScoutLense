@@ -4,7 +4,8 @@ import { ShortlistChart } from "./components/ShortlistChart";
 import { useEffect, useState } from "react";
 import { ShieldCheck, Search, Users } from "lucide-react";
 import { Brand } from "./components/Brand";
-import { SearchPanel } from "./components/SearchPanel";
+import { ScoutingFilters } from "./components/ScoutingFilters";
+import { briefChanged } from "./lib/briefChanged";
 import { CandidateTable } from "./components/CandidateTable";
 import { HomePage } from "./components/HomePage";
 import { Methodology } from "./components/Methodology";
@@ -121,7 +122,10 @@ export default function App() {
             ) : (
               <>
                 <div className="workspace">
-                  <SearchPanel
+                  <ScoutingFilters
+                    dirty={Boolean(
+                      results && briefChanged(query, results.query),
+                    )}
                     catalog={catalog}
                     query={query}
                     setQuery={changeQuery}
@@ -146,8 +150,10 @@ export default function App() {
                       </div>
                       <span className="season-badge">
                         {
-                          catalog.seasons.find((s) => s.id === query.season)
-                            ?.name
+                          catalog.seasons.find(
+                            (s) =>
+                              s.id === (results?.query.season ?? query.season),
+                          )?.name
                         }
                       </span>
                     </div>
