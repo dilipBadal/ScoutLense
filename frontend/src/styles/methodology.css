@@ -1,0 +1,78 @@
+.methodology {
+  border-top: 1px solid #dbe2d2;
+  margin-top: 35px;
+}
+.methodology > summary {
+  padding: 22px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.method-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #71816a;
+}
+.method-grid h3,
+.role-weights h3 {
+  color: #345037;
+  font-size: 13px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.method-grid p {
+  margin-bottom: 13px;
+}
+.method-grid ul {
+  padding-left: 18px;
+}
+.role-weights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 20px 0;
+  color: #71816a;
+}
+.role-weights p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  line-height: 2;
+}
+.role-weights strong {
+  font-weight: 550;
+}
+footer {
+  border-top: 1px solid #dbe2d2;
+  padding: 25px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #8b977e;
+  margin-top: 15px;
+}
+.error {
+  padding: 16px;
+  border: 1px solid #d9aa91;
+  background: #fff6ed;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #85462e;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.error button {
+  background: transparent;
+  border: 0;
+  text-decoration: underline;
+  color: inherit;
+}
+.loading {
+  padding: 60px 0;
+  font-size: 14px;
+  color: #71816a;
+}

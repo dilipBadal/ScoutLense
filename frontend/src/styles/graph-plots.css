@@ -1,0 +1,142 @@
+.scatter-chart,
+.composition-chart {
+  margin: 0;
+}
+.scatter-chart figcaption,
+.composition-chart figcaption {
+  font-size: 12px;
+  font-weight: 600;
+  color: #345037;
+  margin-bottom: 14px;
+}
+.scatter-chart svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+.scatter-chart svg text {
+  font-size: 10px;
+  fill: #71816a;
+}
+.scatter-chart .plot-axis-label {
+  font-size: 11px;
+  fill: #345037;
+}
+.plot-grid {
+  stroke: #e6ebdf;
+  stroke-width: 1;
+}
+.plot-axis {
+  fill: none;
+  stroke: #b0bca2;
+  stroke-width: 1;
+}
+.scatter-mark {
+  stroke: white;
+  stroke-width: 2;
+}
+.plot-selection {
+  fill: none;
+  stroke-width: 1.5;
+}
+.scatter-chart g[role="button"],
+.composition-chart circle[role="button"] {
+  cursor: pointer;
+}
+.plot-player-key {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.plot-player-key button {
+  border: 1px solid #e0e6d8;
+  background: white;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  color: white;
+  min-height: 36px;
+}
+.plot-player-key button[aria-pressed="true"] {
+  outline: 2px solid #18352d;
+  outline-offset: 3px;
+}
+.composition-layout {
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) minmax(0, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+.composition-layout svg {
+  width: 100%;
+  max-width: 280px;
+  justify-self: center;
+  overflow: visible;
+}
+.composition-layout svg text {
+  fill: #71816a;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+.composition-layout svg .composition-total {
+  font-size: 29px;
+  letter-spacing: -1px;
+  font-weight: 650;
+  fill: #244b3b;
+}
+.composition-key {
+  display: grid;
+  gap: 4px;
+}
+.composition-key button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: white;
+  color: #345037;
+  text-align: left;
+  font-size: 11px;
+  min-height: 44px;
+}
+.composition-key button[aria-pressed="true"] {
+  border-color: #d3ddc6;
+  background: #f3f6ec;
+}
+.composition-key i {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.composition-key strong {
+  margin-left: auto;
+  white-space: nowrap;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.raw-metrics-caption {
+  text-align: left;
+  margin: 12px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #345037;
+}
+@media (max-width: 600px) {
+  .composition-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .composition-layout svg {
+    max-width: 220px;
+  }
+  .plot-player-key button {
+    min-height: 44px;
+  }
+}
+
+.candidate-tag {
+  font-weight: 650;
+}

@@ -1,0 +1,29 @@
+@import "./styles/base.css";
+@import "./styles/layout.css";
+@import "./styles/forms.css";
+@import "./styles/results.css";
+@import "./styles/players.css";
+@import "./styles/methodology.css";
+@import "./styles/responsive.css";
+
+@import "./styles/charts.css";
+
+@import "./styles/fit-detail.css";
+
+@import "./styles/formation-pitch.css";
+
+@import "./styles/home.css";
+@import "./styles/candidates.css";
+
+@import "./styles/hero-pitch.css";
+
+@import "./styles/player-navigation.css";
+
+@import "./styles/view-transition.css";
+
+@import "./styles/chart-interactions.css";
+
+@import "./styles/graph-plots.css";
+
+@import "./styles/player-comparison.css";
+@import "./styles/player-avatar.css";

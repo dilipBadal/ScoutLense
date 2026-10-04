@@ -1,0 +1,85 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 11px;
+  font-weight: 650;
+  color: #586b5d;
+}
+.field select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #dce3d6;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0 12px;
+  color: #213a2b;
+  font-size: 12px;
+  font-weight: 500;
+}
+.club-context {
+  background: #f4f6ef;
+  border-radius: 7px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  margin-bottom: 22px;
+  font-size: 11px;
+  color: #627060;
+}
+.club-context strong {
+  color: #23412f;
+  font-size: 16px;
+}
+.club-context small {
+  grid-column: 1/-1;
+  color: #78846f;
+}
+.field-help {
+  font-size: 11px;
+  line-height: 1.65;
+  color: #72806f;
+  margin: -5px 0 16px;
+}
+.filters {
+  border-top: 1px solid #e7ebe2;
+  border-bottom: 1px solid #e7ebe2;
+  margin: 4px 0 20px;
+  font-size: 11px;
+}
+.filters summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  list-style: none;
+  font-weight: 650;
+}
+.filter-content {
+  padding-top: 5px;
+}
+.field input[type="range"] {
+  accent-color: #254c3a;
+  width: 100%;
+}
+.primary {
+  border: 0;
+  background: #173d2b;
+  color: white;
+  border-radius: 6px;
+  min-height: 45px;
+  width: 100%;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 650;
+}
+.form-note {
+  text-align: center;
+  color: #8a9681;
+  font-size: 9px;
+  margin: 14px 0 0;
+}

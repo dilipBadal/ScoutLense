@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "file": "fm2023.csv",
+      "sha256": "5d0b7a19293d3b9bbb2d7d2133f5216ef447ef86c4c7a09533ce0be7cff39b09"
+    },
+    {
+      "file": "fm26-example.csv",
+      "sha256": "6098f7faa0717b78a9428421d8246f68799a02fcbed0f4a120a9b4b398f53659"
+    }
+  ]
+}

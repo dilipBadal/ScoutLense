@@ -1,0 +1,153 @@
+.compare-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+  border-bottom: 1px solid #edf0e8;
+}
+.compare-actions button,
+.comparison-picker > p button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #dce4d0;
+  background: #f4f7ed;
+  border-radius: 6px;
+  padding: 10px 14px;
+  min-height: 44px;
+  font-size: 12px;
+  color: #345037;
+}
+.comparison-picker,
+.player-comparison {
+  padding: 20px;
+}
+.comparison-picker {
+  background: #f8faf4;
+  border-bottom: 1px solid #e2e8d9;
+}
+.comparison-picker input {
+  width: 100%;
+  border: 1px solid #d6dfcc;
+  background: white;
+  border-radius: 6px;
+  padding: 13px;
+  color: #244b3b;
+}
+.comparison-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+.comparison-options button {
+  border: 1px solid #dce4d0;
+  background: white;
+  padding: 14px;
+  border-radius: 7px;
+  text-align: left;
+  color: #244b3b;
+  min-height: 65px;
+}
+.comparison-options strong,
+.comparison-options span {
+  display: block;
+  font-size: 12px;
+}
+.comparison-options span {
+  font-size: 10px;
+  color: #71816a;
+  margin-top: 6px;
+}
+.comparison-identities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.comparison-identities article {
+  border: 1px solid #dde4d5;
+  border-radius: 10px;
+  padding: 20px;
+}
+.comparison-identities h3 {
+  font-size: 21px;
+  margin: 10px 0;
+}
+.comparison-identities p,
+.comparison-identities article > span:last-child {
+  font-size: 11px;
+  color: #71816a;
+  line-height: 1.7;
+}
+.comparison-identities article > strong {
+  display: block;
+  font-size: 35px;
+  letter-spacing: -1px;
+  margin: 15px 0 8px;
+}
+.comparison-identities small {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-left: 8px;
+}
+.comparison-first article > strong,
+.comparison-first > strong {
+  color: #315d47;
+}
+.comparison-second > strong {
+  color: #3866a6;
+}
+.player-comparison > .fit-charts-grid {
+  margin-top: 28px;
+}
+.comparison-numbers {
+  margin: 25px 0;
+}
+.comparison-numbers caption {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  padding-bottom: 14px;
+}
+.comparison-numbers small {
+  display: block;
+  color: #71816a;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.comparison-tradeoffs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  background: #f5f7f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+.comparison-tradeoffs h4,
+.player-comparison .fit-charts-grid h4 {
+  font-size: 12px;
+  margin: 0 0 12px;
+}
+.comparison-tradeoffs p {
+  font-size: 11px;
+  line-height: 1.7;
+}
+.player-comparison .composition-layout {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.player-comparison .composition-layout svg {
+  max-width: 220px;
+}
+@media (max-width: 600px) {
+  .comparison-identities,
+  .comparison-tradeoffs,
+  .comparison-options {
+    grid-template-columns: 1fr;
+  }
+  .player-comparison,
+  .comparison-picker {
+    padding: 15px;
+  }
+}

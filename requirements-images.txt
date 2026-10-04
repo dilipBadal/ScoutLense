@@ -1,0 +1,2 @@
+# Optional local face extraction; not needed by the deployed API.
+Pillow>=12,<13

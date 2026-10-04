@@ -1,0 +1,92 @@
+main {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 5.5%;
+}
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 57px 0 43px;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: #697c6d;
+}
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #81a74e;
+}
+h1 {
+  font-size: clamp(30px, 3.4vw, 49px);
+  letter-spacing: -2px;
+  line-height: 1.14;
+  margin: 18px 0;
+}
+h1 > span {
+  color: #758675;
+  font-weight: 480;
+}
+.intro p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #667268;
+}
+.intro-stat {
+  border-left: 1px solid #dce1d7;
+  padding-left: 35px;
+  margin-bottom: 7px;
+  min-width: 228px;
+}
+.intro-stat strong {
+  display: block;
+  font-size: 52px;
+  font-weight: 550;
+  letter-spacing: -2px;
+  margin-bottom: 9px;
+}
+.intro-stat strong span {
+  font-size: 19px;
+  letter-spacing: -0.5px;
+}
+.intro-stat > span {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #6a786c;
+}
+.workspace {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+.search-panel {
+  background: white;
+  border: 1px solid #dde3d8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.panel-heading {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  padding: 20px 22px;
+  border-bottom: 1px solid #e8ece3;
+  font-size: 13px;
+  font-weight: 650;
+}
+.step {
+  margin-left: auto;
+  color: #9ba897;
+  font-size: 11px;
+}
+.search-panel form {
+  padding: 22px;
+}

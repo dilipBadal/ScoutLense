@@ -1,0 +1,27 @@
+{
+  "mapped_players": 2954,
+  "imported_players": 2952,
+  "total_bytes": 48429012,
+  "missing_pack_faces": [
+    {
+      "player_id": "1170001",
+      "name": "Henrick Do Marcolino",
+      "fm_id": "2000289245",
+      "date_of_birth": "2006-03-21",
+      "fm_name": "Henrick Do Marcolino",
+      "export_date": "2026-04-27",
+      "match_method": "unique_full_name_and_dob_consistent_age",
+      "identity_source": "https://github.com/fredGob/FMdataExport/blob/main/DataAnalyser/FM26_Example_data.csv"
+    },
+    {
+      "player_id": "1291929",
+      "name": "Yvan Zaddy",
+      "fm_id": "2000489317",
+      "date_of_birth": "2006-05-01",
+      "fm_name": "Yvan Zaddy",
+      "export_date": "2026-04-27",
+      "match_method": "unique_full_name_and_dob_consistent_age",
+      "identity_source": "https://github.com/fredGob/FMdataExport/blob/main/DataAnalyser/FM26_Example_data.csv"
+    }
+  ]
+}

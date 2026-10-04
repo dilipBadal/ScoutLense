@@ -1,0 +1,137 @@
+@media (hover: hover) and (pointer: fine) {
+  .primary:hover {
+    background: #285239;
+  }
+  .nav-link:hover,
+  .evidence > a:hover {
+    color: #658348;
+  }
+  .field select:hover {
+    border-color: #aab89b;
+  }
+  .player-details summary:hover {
+    background: #f9faf5;
+  }
+}
+@media (max-width: 1050px) {
+  .workspace {
+    grid-template-columns: 270px minmax(0, 1fr);
+    gap: 22px;
+  }
+  .player-content {
+    grid-template-columns: 1fr;
+    padding-left: 23px;
+  }
+  .player-facts {
+    border-top: 1px solid #edf0e8;
+    padding-top: 14px;
+  }
+  .evidence {
+    padding-left: 23px;
+  }
+  .intro-stat {
+    min-width: 190px;
+  }
+  .player-heading {
+    gap: 12px;
+    padding: 20px;
+  }
+  .nav-label {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .topbar {
+    height: 68px;
+    padding: 0 6%;
+  }
+  main {
+    padding: 0 6%;
+  }
+  .nav-link {
+    font-size: 10px;
+  }
+  .intro {
+    padding: 35px 0 28px;
+  }
+  .intro-stat {
+    display: none;
+  }
+  h1 {
+    letter-spacing: -1.2px;
+  }
+  .intro p {
+    font-size: 12px;
+  }
+  .workspace {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+  .search-panel form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 14px;
+  }
+  .club-context,
+  .field-help,
+  .filters,
+  .primary,
+  .form-note {
+    grid-column: 1/-1;
+  }
+  .search-panel form > .field:nth-of-type(3),
+  .search-panel form > .field:nth-of-type(4) {
+    grid-column: 1/-1;
+  }
+  .filter-content .field {
+    display: flex;
+  }
+  .results h2 {
+    font-size: 16px;
+  }
+  .empty-state {
+    min-height: 330px;
+  }
+  .player-identity h3 {
+    font-size: 17px;
+  }
+  .fit strong {
+    font-size: 27px;
+  }
+  .rank {
+    display: none;
+  }
+  .player-heading {
+    padding: 18px;
+  }
+  .player-content {
+    padding: 0 18px 18px;
+  }
+  .result-meta {
+    flex-wrap: wrap;
+  }
+  .method-grid,
+  .role-weights {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  footer {
+    gap: 15px;
+    line-height: 1.6;
+    flex-wrap: wrap;
+  }
+  .desktop-break {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  button:active {
+    transform: none;
+  }
+}

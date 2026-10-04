@@ -1,0 +1,131 @@
+.results-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0 22px;
+  gap: 15px;
+}
+.results h2 {
+  font-size: 18px;
+  font-weight: 550;
+  letter-spacing: -0.4px;
+  margin-top: 9px;
+  line-height: 1.4;
+}
+.season-badge {
+  font-size: 10px;
+  white-space: nowrap;
+  background: #e9ede2;
+  border: 1px solid #dce2d3;
+  border-radius: 4px;
+  padding: 6px 9px;
+  color: #687759;
+}
+.empty-state {
+  min-height: 480px;
+  border: 1px dashed #d5decc;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #7a8d73;
+  padding: 35px;
+}
+.empty-state h3 {
+  font-size: 19px;
+  letter-spacing: -0.5px;
+  color: #3b513e;
+  margin: 28px 0 12px;
+  font-weight: 550;
+}
+.empty-state p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #84907e;
+}
+.empty-caption {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  margin-top: 28px;
+}
+.pitch {
+  width: 220px;
+  height: 150px;
+  border: 1px solid #d0d9c5;
+  border-radius: 7px;
+  position: relative;
+  background: #f0f3e9;
+  overflow: hidden;
+}
+.pitch:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid #d0d9c5;
+}
+.pitch:after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 34px;
+  width: 35px;
+  height: 80px;
+  border: 1px solid #d0d9c5;
+}
+.pitch-circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #d0d9c5;
+  border-radius: 50%;
+  left: calc(50% - 30px);
+  top: calc(50% - 30px);
+}
+.marker {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border: 3px solid #f4f6ee;
+  background: #91aa71;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #afbf9b;
+}
+.one {
+  top: 65px;
+  left: 32px;
+}
+.two {
+  top: 29px;
+  left: 82px;
+}
+.three {
+  top: 105px;
+  left: 82px;
+}
+.four {
+  top: 65px;
+  left: 130px;
+}
+.five {
+  top: 65px;
+  left: 180px;
+}
+.result-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 10px;
+  color: #71816c;
+  margin-bottom: 18px;
+}
+.result-meta > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}

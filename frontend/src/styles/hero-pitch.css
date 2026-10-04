@@ -1,0 +1,62 @@
+.hero-formation {
+  margin: 0;
+  width: 100%;
+  max-width: 390px;
+  justify-self: center;
+}
+.hero-formation figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  font-size: 11px;
+  color: #71816e;
+}
+.hero-formation figcaption > span:first-child {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #244b3b;
+}
+.hero-pitch {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 7;
+  background: #244b3b;
+  border: 1px solid #315942;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.hero-pitch > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #adc6a659;
+  stroke-width: 0.45;
+}
+.hero-player {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #eef3df;
+  color: #244b3b;
+  border: 1px solid #d4dfbd;
+  font-size: 10px;
+  font-weight: 700;
+  box-shadow: 0 3px 8px #132b2420;
+}
+@media (max-width: 760px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  .hero-formation {
+    max-width: 360px;
+  }
+}

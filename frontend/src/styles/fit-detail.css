@@ -1,0 +1,75 @@
+.fit-explanation {
+  background: #f5f7f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+.fit-explanation h4 {
+  font-size: 12px;
+  margin: 0 0 12px;
+  color: #345037;
+}
+.fit-explanation p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #617258;
+  margin: 8px 0;
+}
+.fit-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.fit-charts-grid > * {
+  min-width: 0;
+}
+.gap-chart {
+  margin: 0;
+}
+.gap-chart figcaption {
+  font-size: 12px;
+  font-weight: 600;
+  color: #345037;
+  margin-bottom: 16px;
+}
+.gap-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #71816a;
+  margin-bottom: 14px;
+}
+.gap-row {
+  margin-bottom: 18px;
+}
+.gap-row .chart-note {
+  margin-top: 5px;
+}
+.gap-track {
+  height: 10px;
+  position: relative;
+  background: #eef1e9;
+  border-radius: 3px;
+}
+.gap-zero {
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  bottom: -3px;
+  border-left: 1px solid #9ca68e;
+  z-index: 1;
+}
+.gap-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #537155;
+}
+.gap-fill.negative {
+  background: #ad8747;
+}
+@media (max-width: 1050px) {
+  .fit-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}

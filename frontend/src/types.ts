@@ -1,0 +1,101 @@
+export type Option = { id: string; name: string };
+export type Team = Option & {
+  league: string;
+  season: string;
+  possession: number | null;
+  formations: { name: string; matches: number }[];
+  formation_date: string | null;
+};
+export type Role = Option & {
+  position: string;
+  positions: string[];
+  description: string;
+  weights: Record<string, number>;
+};
+export type Catalog = {
+  positions: Option[];
+  seasons: Option[];
+  leagues: Option[];
+  teams: Team[];
+  roles: Role[];
+  metrics: Record<string, [string, string]>;
+  report: Record<string, number>;
+  limitations: string[];
+  prepared_at: string;
+};
+export type Query = {
+  purpose?: "recruitment" | "comparison";
+  name?: string;
+  player_id?: string | null;
+  page?: number;
+  page_size?: number;
+  team_id: string;
+  season: string;
+  role: string;
+  position: string;
+  min_minutes: number;
+  max_age: number;
+  max_value: number | null;
+  foot: string;
+  formation: string | null;
+};
+export type Metric = {
+  key: string;
+  label: string;
+  unit: string;
+  value: number;
+  percentile: number;
+  weight: number;
+  benchmark_count: number;
+};
+export type Player = {
+  team_id: string;
+  id: string;
+  name: string;
+  team: string;
+  age: number;
+  minutes: number;
+  foot: string | null;
+  value: number | null;
+  value_date: string | null;
+  contract: string | null;
+  score: number;
+  role_score: number;
+  compatibility: number | null;
+  confidence: string;
+  metrics: Metric[];
+  reasons: string[];
+  tradeoff: string;
+  sources: string[];
+  position_source: string;
+  history: { season: string; team: string; minutes: number }[];
+};
+export type TeamAnalysis = {
+  position: string;
+  position_name: string;
+  incumbents: {
+    id: string;
+    name: string;
+    minutes: number;
+    metrics: Metric[];
+    role_score: number | null;
+  }[];
+  metrics: (Metric & { sample_players: number })[];
+  role_score: number | null;
+  league_possession: number | null;
+  league_sample: number;
+  position_coverage: (Option & { players: number })[];
+  note: string;
+};
+export type Results = {
+  pagination: { page: number; page_size: number; pages: number };
+  team_analysis: TeamAnalysis;
+  players: Player[];
+  eligible: number;
+  team: Team;
+  query: Query;
+  benchmark: string;
+  method: string;
+  formation: string | null;
+  excluded: { missing_metrics: number; filters: number };
+};

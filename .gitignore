@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.venv/
+.env
+.env.*
+!.env.example
+.vercel/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+data/
+artifacts/
+*.tsbuildinfo

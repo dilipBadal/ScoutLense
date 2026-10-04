@@ -1,0 +1,9 @@
+data/
+.venv/
+node_modules/
+tests/
+scripts/
+.pytest_cache/
+__pycache__/
+main.py
+artifacts/
