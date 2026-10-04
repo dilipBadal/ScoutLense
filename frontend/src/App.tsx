@@ -2,7 +2,8 @@ import { useScoutingState } from "./lib/useScoutingState";
 import { TeamCharts } from "./components/TeamCharts";
 import { ShortlistChart } from "./components/ShortlistChart";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Focus, ShieldCheck, Search, Users } from "lucide-react";
+import { ArrowUpRight, ShieldCheck, Search, Users } from "lucide-react";
+import { Brand } from "./components/Brand";
 import { SearchPanel } from "./components/SearchPanel";
 import { CandidateTable } from "./components/CandidateTable";
 import { HomePage } from "./components/HomePage";
@@ -48,10 +49,7 @@ export default function App() {
           onClick={(e) => link(e, "/")}
           aria-label="ScoutLens home"
         >
-          <Focus size={26} />
-          <span>
-            ScoutLens<span className="brand-dot">.</span>
-          </span>
+          <Brand />
         </a>
         <span className="nav-label">RECRUITMENT INTELLIGENCE</span>
         <nav className="site-nav" aria-label="Main navigation">

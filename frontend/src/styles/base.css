@@ -81,6 +81,11 @@ p {
 .brand-dot {
   color: #719542;
 }
+.brand-mark {
+  display: block;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
 .nav-label {
   font-size: 10px;
   font-weight: 650;
