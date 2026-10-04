@@ -1,5 +1,6 @@
 import { useId, useState } from "react";
 import type { Metric } from "../../types";
+import { radarMetricLabel } from "../../lib/metricLabels";
 const point = (index: number, count: number, value: number) => {
   const angle = -Math.PI / 2 + (index * 2 * Math.PI) / count;
   return [
@@ -52,6 +53,7 @@ export function RadarChart({
         {metrics.map((m, i) => {
           const end = point(i, metrics.length, 100),
             label = point(i, metrics.length, 120);
+          const lines = radarMetricLabel(m.key, m.label);
           return (
             <g key={m.key}>
               <line
@@ -67,7 +69,16 @@ export function RadarChart({
                 textAnchor="middle"
                 dominantBaseline="middle"
               >
-                {i + 1}
+                <title>{m.label}</title>
+                {lines.map((line, index) => (
+                  <tspan
+                    key={line}
+                    x={label[0]}
+                    dy={index === 0 ? -((lines.length - 1) * 6) : 12}
+                  >
+                    {line}
+                  </tspan>
+                ))}
               </text>
             </g>
           );
@@ -160,7 +171,7 @@ export function RadarChart({
             </tr>
           </thead>
           <tbody>
-            {metrics.map((m, i) => (
+            {metrics.map((m) => (
               <tr key={m.key}>
                 <th scope="row">
                   <button
@@ -168,7 +179,7 @@ export function RadarChart({
                     aria-pressed={activeKey === m.key}
                     onClick={() => setActiveKey(m.key)}
                   >
-                    {i + 1}. {m.label}
+                    {m.label}
                   </button>
                 </th>
                 <td>{m.percentile.toFixed(0)}</td>
